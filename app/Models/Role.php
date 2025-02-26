@@ -13,4 +13,8 @@ class Role extends Model
     {
         return $this->hasMany(User::class);
     }
+    public function hasUsers(): bool
+    {
+        return $this->users()->exists();
+    }
 }
