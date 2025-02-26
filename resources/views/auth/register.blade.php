@@ -93,7 +93,7 @@
             <p class="text-gray-400 mt-2">Système de gestion de tickets</p>
         </div>
 
-        <form action="{{ route('register') }}" method="post">
+        <form action="{{ route('user.store') }}" method="post">
             @csrf
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Left Column -->
@@ -249,7 +249,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <!-- Client Role -->
                     <div class="relative">
-                        <input type="radio" id="role-client" name="role_id" value="3"
+                        <input type="radio" id="role-client" name="role" value="3"
                             class="sr-only role-radio">
                         <label for="role-client"
                             class="role-card block cursor-pointer bg-gray-800 border border-gray-700 rounded-lg p-4 text-center hover:bg-gray-700">
@@ -272,7 +272,7 @@
 
                     <!-- Developer Role -->
                     <div class="relative">
-                        <input type="radio" id="role-developer" name="role_id" value="2"
+                        <input type="radio" id="role-developer" name="role" value="2"
                             class="sr-only role-radio">
                         <label for="role-developer"
                             class="role-card block cursor-pointer bg-gray-800 border border-gray-700 rounded-lg p-4 text-center hover:bg-gray-700">
@@ -295,7 +295,7 @@
 
                     <!-- Admin Role -->
                     <div class="relative">
-                        <input type="radio" id="role-admin" name="role_id" value="1"
+                        <input type="radio" id="role-admin" name="role" value="1"
                             class="sr-only role-radio">
                         <label for="role-admin"
                             class="role-card block cursor-pointer bg-gray-800 border border-gray-700 rounded-lg p-4 text-center hover:bg-gray-700">

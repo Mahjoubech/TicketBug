@@ -26,14 +26,14 @@ class AuthController extends Controller
               'last_name' => 'required|min:3|max:15',
               'email' => 'required|email|unique:users,email',
               'phone' => 'required|regex:/^[0-9+\-\s]+$/|min:8|max:15',
-              'role_id' => 'required|in:client,developer,admin',
+              'role' => 'required',
               'password' => 'required|confirmed|min:8',
 
 
         ]);
-        dd($validated['role']);
+        // dd($validated['role']);
            $fullname = $validated['frst_name']. ' ' . $validated['last_name'];
-           $user = User::create([
+           User::create([
             'name' => $fullname,
             'email' => $validated['email'],
             'phone' => $validated['phone'],

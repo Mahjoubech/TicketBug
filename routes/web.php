@@ -8,8 +8,8 @@ Route::get('/', function () {
 });
 
 //register
-Route::get('/register',[AuthController::class , 'register'])->name('register');
-Route::post('/register',[AuthController::class , 'store']);
+Route::get('/register',[AuthController::class , 'register']);
+Route::post('/user/store',[AuthController::class , 'store'])->name('user.store');
 //login
 Route::get('/login',[AuthController::class , 'login'])->name('login');
 Route::post('/login',[AuthController::class , 'authenticate']);
