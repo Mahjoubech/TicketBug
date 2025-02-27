@@ -55,19 +55,6 @@ class User extends Authenticatable
         return $this->BelongsTo(Role::class);
     }
 
-    public function isAdmin()
-    {
-        return $this->role->name === 'admin';
-    }
-
-    public function isDeveloper()
-    {
-        return $this->role->name === 'developer';
-    }
-
-    public function isClient()
-    {
-        return $this->role->name === 'client';
-    }
+   
 
 }
