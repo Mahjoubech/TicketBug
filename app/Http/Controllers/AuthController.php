@@ -44,16 +44,20 @@ class AuthController extends Controller
         return redirect()->route('login')->with('success','Account created Successfuly !!');
     }
     public function authenticate(){
-        dd(request()->all());
+
         $validated = request()->validate([
               'email' => 'required|email',
               'password' => 'required|min:8',
 
         ]);
+
         if(Auth :: attempt($validated)){
             request()->session()->regenerate();
-            return redirect()->route('qstHome')->with('success',' login in Successfuly !!');
+            
+        return redirect()->route('dash')->with('success', 'Login successful!');
+
         }
+
         return redirect()->route('login')->withErrors([
             'email' => 'No matching user found with the provided email and password'
         ]);
