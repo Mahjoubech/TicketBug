@@ -93,7 +93,7 @@
             <p class="text-gray-400 mt-2">Système de gestion de tickets</p>
         </div>
 
-        <form action="{{ route('user.store') }}" method="post">
+        <form action="{{ route('register') }}" method="post">
             @csrf
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Left Column -->
@@ -327,7 +327,7 @@
             </div>
 
             <button type="submit"
-                class="w-full bg-gray-500 hover:bg-opacity-90 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                class="w-full hover:bg-opacity-90 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
                 S'inscrire
             </button>
         </form>
